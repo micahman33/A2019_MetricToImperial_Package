@@ -1,0 +1,9 @@
+{
+  "label" : "Metric To Imperial",
+  "description" : "Converts lengths and distances from Metric format to Imperial format.",
+  "CMtoINCH.label" : "Convert centimeters to inches",
+  "CMtoINCH.node_label": "cm to inches",
+  "CMtoINCH.description" : "Convert centimeters to inches",
+  "CMtoINCH.return_label" : "Assign the Output in Inches to a Variable",
+  "CMtoINCH.CMInput.label" : "CM to Convert"
+}
