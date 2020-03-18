@@ -34,10 +34,14 @@ public class CMtoINCH {
         //Internal validation, to disallow empty inputs. No null check needed as we have NotEmpty on CMInput.
         if ("".equals(CMInput.toString().trim()))
             throw new BotCommandException("Input of CM is required");
-
-        //Conversion logic
-        Number result = CMInput * 0.393701;
-
+        Number result;
+        try {
+            //Conversion logic
+            result = CMInput * 0.393701;
+        } catch (Exception e) {
+            //Throw custom error message
+            throw new BotCommandException("Unable to convert " + CMInput.toString() + "cm to inches");
+        }
         //Return NumberValue.
         return new NumberValue(result);
     }
